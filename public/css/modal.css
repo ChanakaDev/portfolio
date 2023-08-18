@@ -1,0 +1,64 @@
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 999; 
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9); 
+  }
+  
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 850px;
+  cursor: zoom-out;
+  transition: 0.3s;
+}
+  
+#modalCaption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 850px;
+  text-align: center;
+  color: #ebebeb;
+  padding: 20px 0;
+}
+
+.modal-content, #modalCaption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+  /* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+  }
+}
